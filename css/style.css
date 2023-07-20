@@ -69,13 +69,17 @@ img {
     background-color: rgba(48, 48, 48, 0.5);
 }
 
-#header .pc.active {
+.header_bg{
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    top: 0;
     background-color: #ffffff;
-    color: #000000;
+    z-index: -1;
+    display: none;
 }
 
-#header .pc.active nav>ul>li>a,
-#header .pc.active .gnb>ul>li>a {
+#header .pc nav:hover ul>li>a{
     color: #000000;
 }
 
@@ -84,6 +88,14 @@ img {
     color: #ffffff;
     text-transform: uppercase;
     line-height: 100px;
+}
+
+#header .pc nav>ul>li:hover>a{
+    color: #000000;
+} 
+
+#header .pc nav:hover + .gnb ul li a{
+    color: #000000;
 }
 
 #header .pc nav>ul>li,
@@ -107,13 +119,11 @@ img {
 .pc nav>ul>li>ul.sub {
     width: 100%;
     height: 0;
-    background-color: #ffffff;
     position: absolute;
     top: 100px;
     left: 0;
     padding-left: 15px;
     overflow: hidden;
-    transition: height 0.5s;
 }
 
 .pc nav>ul>li>ul.sub.active {

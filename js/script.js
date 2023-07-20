@@ -1,19 +1,21 @@
 $(function () {
     /* 헤더 네비 */
-    $('.pc > nav > ul >li').on('mouseenter focusin', function () {
+    $('.pc > nav > ul >li').mouseover(function(){
         $(this).find('.sub').addClass('active');
-        $('#header .pc').addClass('active');
+        $('.header_bg').css('display','block');
+
     });
 
-    $('.pc > nav > ul >li').on('mouseleave focusout', function () {
+    $('.pc > nav > ul >li').mouseout(function(){
         $(this).find('.sub').removeClass('active');
-        $('#header .pc').removeClass('active');
+        $('.header_bg').css('display','none');
     });
+    
 
     /* 모바일 네비 */
     $('.mobile>ul>li').click(function () {
         $('.Mmenu').toggle('slow');
-    }); 0
+    });
     $('.Mmenu>ul>li:first').click(function () {
         $('.Mmenu').toggle('slow');
     });
