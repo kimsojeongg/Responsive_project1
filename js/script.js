@@ -88,18 +88,18 @@ $(function () {
 
             move(next, '100%', 0);
             // pn.addClass('bl');
-        }, 2000);
+        }, 4000);
     }
 
     function move(tg, start, end) {
-        tg.css('left', start).stop().animate({ left: end }, { duration: 500, ease: 'easeOutCubic' })
+        tg.css('left', start).stop().animate({ left: end }, { duration: 1000, ease: 'easeOutCubic' })
     }
 
 
 
 
     //마우스 올려졌을 때 멈춤
-    $('#contents_wrap .content,.Cbtn p.prev,.Cbtn p.next').on({
+    $('#contents_wrap .content, .Cbtn p.prev, .Cbtn p.next').on({
         mouseover: function () {
             clearInterval(setIntervalId);  //반복되는거 취소
         }, mouseout: function () {
